@@ -6,21 +6,28 @@ pipeline {
    // Build  
     stages {
         stage('Build') {
-            steps {
-                echo 'Building..'
+            steps { 
+                script{
+                   echo 'Building..'
+                }
             }
         }
         stage('Test') {
-            steps {
-                echo 'Testing..'
+            steps { 
+                script{
+                    echo 'Testing..'
+                }
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                script{
+                   echo 'Deploying....'
+                }
             }
         }
-    }
+    } 
+    
     post { 
         always { 
             echo 'I will always say Hello again!'
